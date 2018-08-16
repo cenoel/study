@@ -1,0 +1,10 @@
+<odoo>
+  <data>
+
+    <menuitem name="START" id="start_main_menu" parent="" web_icon="start,static/src/img/start.png"
+              action=""/>
+
+    <menuitem name="START PRODUCT" id="start_product_sub_menu" parent="start_main_menu"
+              action="stock.product_template_action_product" sequence="10"/>
+  </data>
+</odoo>
