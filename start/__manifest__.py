@@ -1,35 +1,29 @@
 # -*- coding: utf-8 -*-
 {
     'name': "START",
-    'icon':'/start/static/src/img/start.png',
+    'icon': '/start/static/src/img/start.png',
     'sequence': -10,
-    'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
-
-    'description': """
-        Long description of module's purpose
-    """,
-
+    'summary': """""",
+    'description': """""",
     'author': "ALLCODETRUE",
     'website': "http://www.yourcompany.com",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
-    # for the full list
     'category': 'Uncategorized',
     'version': '0.1',
-
-    # any module necessary for this one to work correctly
-    'depends': ['base','start_product'],
-
-    # always loaded
+    'depends': [
+        'base',
+        'contacts',
+        'maintenance',
+        'product',
+        'stock',
+        'purchase'
+    ],
     'data': [
         # 'security/ir.model.access.csv',
+        'data/start_res_config_settings_data.xml',
+        'data/start_type_partner_data.xml',
+        'views/start_maintenance_equipment_view.xml',
+        'views/start_res_partner_view.xml',
         'views/start_menu_view.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
 }
+

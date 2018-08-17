@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="start_pation_action" model="ir.actions.act_window">
+    <field name="name">Patients</field>
+    <field name="res_model">res.partner</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">kanban,tree,form</field>
+    <field name="search_view_id" ref="base.view_res_partner_filter"/>
+    <field name="context">{'default_patient': active_id}</field>
+    <field name="domain" eval="[('type_partner','=', ref('start.start_patient_partner'))]"/>
+  </record>
+
+  <record id="start_doctor_action" model="ir.actions.act_window">
+    <field name="name">Doctor</field>
+    <field name="res_model">res.partner</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">kanban,tree,form</field>
+    <field name="search_view_id" ref="base.view_res_partner_filter"/>
+    <field name="context">{'default_patient': active_id}</field>
+    <field name="domain" eval="[('type_partner','=', ref('start.start_doctor_partner'))]"/>
+  </record>
+</odoo>
